@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flores y Amor Eterno</title>
+    <style>
+        :root {
+            --rojo-profundo: #800000;
+            --rojo-pasion: #d00000;
+            --rosa-amor: #ff4d6d;
+            --fondo-negro: #0f0505;
+        }
+
+        body {
+            background-color: var(--fondo-negro);
+            background-image: radial-gradient(circle, #3d0a0a 0%, #0f0505 100%);
+            color: white;
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Capa de pétalos sutiles de fondo */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url('https://www.transparenttextures.com/patterns/pollen.png');
+            opacity: 0.3;
+            z-index: 1;
+        }
+
+        .container {
+            position: relative;
+            width: 95%;
+            max-width: 1100px;
+            background: rgba(20, 5, 5, 0.9);
+            border: 3px solid var(--rojo-pasion);
+            border-radius: 40px;
+            padding: 40px;
+            box-shadow: 0 0 60px rgba(208, 0, 0, 0.5);
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 40px;
+            z-index: 2;
+        }
+
+        /* SECCIÓN IZQUIERDA: DISCO */
+        .player-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .vinyl-container {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .vinyl-disc {
+            width: 280px;
+            height: 280px;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/b/b6/Vinyl_record_LP.png') center/cover;
+            border-radius: 50%;
+            animation: rotate 10s linear infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 20px rgba(0,0,0,0.8);
+        }
+
+        .vinyl-label {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 2px solid white;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Imagen dentro del disco */
+        .vinyl-label img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        audio {
+            margin-top: 30px;
+            filter: invert(1) hue-rotate(150deg) brightness(1.2);
+            width: 100%;
+            opacity: 0.8;
+        }
+
+        /* SECCIÓN DERECHA: IMAGEN Y TEXTOS */
+        .content-section {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .header-title {
+            font-size: 2.5rem;
+            color: var(--rosa-amor);
+            margin: 0;
+            text-align: center;
+            text-shadow: 2px 2px 5px rgba(0,0,0,1);
+            letter-spacing: 2px;
+        }
+
+        .image-frame {
+            width: 100%;
+            height: 420px;
+            border: 12px solid #fff;
+            outline: 2px solid var(--rojo-pasion);
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        /* LA IMAGEN PRINCIPAL DEL CÓDIGO */
+        .image-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .message-box {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 5px solid var(--rojo-pasion);
+            padding: 20px;
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #ffcccc;
+            line-height: 1.5;
+        }
+
+        .footer-text {
+            text-align: right;
+            color: var(--rojo-pasion);
+            font-size: 3rem;
+            margin: 0;
+            line-height: 0.9;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- REPRODUCTOR -->
+    <div class="player-section">
+        <div class="vinyl-container">
+            <div class="vinyl-disc">
+                <div class="vinyl-label">
+                    <!-- Imagen en el centro del disco -->
+                    <img src="https://images.unsplash.com/photo-1559563458-527698bf5295?q=80&w=500&auto=format&fit=crop" alt="Centro del disco">
+                </div>
+            </div>
+        </div>
+        
+        <audio controls>
+            <source src="le-fisher.mp3" type="audio/mpeg">
+            Tu navegador no soporta audio.
+        </audio>
+
+        <div style="margin-top: 25px;">
+            <h3 style="color: var(--rosa-amor); margin-bottom: 5px;">Rosas de Pasión</h3>
+            <p style="font-size: 0.9rem; color: #aaa;">Letra: Y me perdí
+En tu brillo opalina me perdí
+Y la forma de tus labios me aprendí
+No me digas que es extraño
+Que tú seas todo lo que yo pedí
+Y te seguí
+Sin pensar que fuera raro te seguí
+Y bajo el calor de mayo entendí
+Que habían tantas cosas
+Pero sólo te quería junto a mí
+Fiché
+Fiché
+Tengo ganas de robar
+La luz de la ciudad
+Y dejarle a nuestra luna el que será
+Fiché
+Fiché
+Tanto miedo de pensar
+Que te digo la verdad
+Y que tal vez tu ya nunca volverás
+Te doy mi libertad
+Tu manera al caminar
+Esos gestos al hablar
+Y las cejas que ya no puedo olvidar
+Fiché
+Fiché
+Tengo ganas de robar
+La luz de la ciudad
+Y dejarle a nuestra luna el que será</p>
+        </div>
+    </div>
+
+    <!-- CONTENIDO -->
+    <div class="content-section">
+        <h1 class="header-title">♥ Habre mi cabeza ♥</h1>
+        
+        <div class="image-frame">
+            <!-- IMAGEN PRINCIPAL MODIFICABLE DESDE AQUÍ -->
+            <img src="Dia3.jpg" alt="Music Cover Art">
+        </div>
+
+        <div class="message-box">
+            "Eres mi absoluto primer paso en todo y la única vez del amor verdadero; eres la creación de nuestro propio mundo y la expresión más hermosa de lo que es amar.."
+        </div>
+
+        <h2 class="footer-text">Ana <br>  Mi unica razon de vivir </h2>
+    </div>
+</div>
+
+</body>
+</html>
